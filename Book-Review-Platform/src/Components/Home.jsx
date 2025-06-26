@@ -1,21 +1,22 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 function Home() {
   return (
     <>
         <nav className='h-16 w-full bg-green-400 flex items-center justify-between px-4'>
-            <div className="w-1/2 flex items-center justify-evenly">
-                <NavLink to='/' className='text-black text-xl m-4 m-l-8'>Book_review.com</NavLink>
-                <input type="text" className='text-white h-10 w-96 p-4 rounded-md' placeholder='Search...' />
+            <div className="w-1/2 flex items-center justify-between">
+                <NavLink to='/' className='text-black text-xl m-2 m-l-8'>Book_review.com</NavLink>
+                <input type="text" className='text-black h-10 w-96 p-4 rounded-md' placeholder='Search...' />
             </div>
             <div className="w-1/2 flex items-center justify-end">
-                <button className="text-white bg-green-600 m-2 h-10 w-32 rounded-md font-semibold ">Sign in</button>
-                <button className='text-white bg-green-900 m-2 h-10 w-64 rounded-md font-semibold'>Write a review</button>
+                <button className="text-white b h-10 w-16 rounded-md font-semibold ">Sign in</button>
+                <button className='text-white bg-green-900 m-2 h-10 w-32 rounded-md font-semibold'>Write a review</button>
             </div>
         </nav>
 
         <div className='h-72 w-full bg-[url(./images/book.jpeg)] flex flex-col items-center justify-center'>
-            <div className='w-full h-72 bg-green-900 opacity-75 flex flex-col items-center justify-center'>
+            <div className='w-full h-72 bg-blue-900 opacity-75 flex flex-col items-center justify-center'>
                 <h1 className="text-4xl text-white font-semibold m-4">Know Better, Choose Better</h1>
                 <h1 className='text-white'>Reviews By people like you</h1>
                 <input type="text" className='text-black h-12  w-3/5 p-4 m-4 rounded-xs' placeholder='What are you looking for.. ?' />
@@ -31,22 +32,22 @@ function Home() {
             <h1 className=' text-2xl font-semibold m-2'>Popular Categories</h1>
             <h1>Browse our most popular Categories</h1>
             <div className='w-full m-2 flex justify-between m-0 p-0'>
-                <div className='w-1/4 h-40 bg-[url(./images/fiction.jpeg)] m-2 flex justify-center items-center rounded-md'>
+                <div className='w-1/4 h-40 bg-[url(./images/fiction.jpeg)] m-2 flex justify-center items-center'>
                     <div className='bg-green-500 opacity-50 w-full h-full flex items-center justify-center'>
                         <h1>Fiction</h1>
                     </div>
                 </div>
-                <div className='w-1/4 h-40 bg-[url(./images/non-fiction.jpeg)] m-2 flex justify-center items-center rounded-md'>
+                <div className='w-1/4 h-40 bg-[url(./images/non-fiction.jpeg)] m-2 flex justify-center items-center'>
                     <div className='bg-green-500 opacity-50 w-full h-full flex items-center justify-center'>
                         <h1>Non-Fiction</h1>
                     </div>
                 </div>
-                <div className='w-1/4 h-40 bg-[url(./images/Poetry1.jpeg)] m-2 flex justify-center items-center rounded-md'>
+                <div className='w-1/4 h-40 bg-[url(./images/Poetry1.jpeg)] m-2 flex justify-center items-center'>
                     <div className='bg-green-500 opacity-50 w-full h-full flex items-center justify-center'>
                         <h1>Poetry</h1>
                     </div>
                 </div>
-                <div className='w-1/4 h-40 bg-[url(./images/drama.jpeg)] m-2 flex justify-center items-center rounded-md'>
+                <div className='w-1/4 h-40 bg-[url(./images/drama.jpeg)] m-2 flex justify-center items-center'>
                     <div className='bg-green-500 opacity-50 w-full h-full flex items-center justify-center'>
                         <h1>Drama</h1>
                     </div>
@@ -54,7 +55,44 @@ function Home() {
             </div>
         </div>
 
-        <footer className='h-16 w-full'></footer>
+        <div className='h-32 w-full bg-zinc-100 flex flex-col items-center justify-center border-b-2'>
+            <h1 className='m-2 text-2xl font-semibold'>Featured Review</h1>
+            <h1>Browse some of oue latest reviews</h1>
+        </div>
+
+        <footer className='h-16 w-full'>
+            <div className='h-64 w-full bg-zinc-200 flex justify-between p-4'> 
+                <div className='w-1/2 h-full'>
+                    <h1 className='text-green-400 font-semibold'>GET MORE INFO</h1> 
+                        <li><Link>Help Centre </Link></li>
+                        <li><Link> About us</Link></li>
+                        <li><Link>Write a Review </Link></li>
+                        <li><Link>Posting Guidelines </Link></li>
+                        <li><Link>Trust Centre </Link></li>
+                        <li><Link>Terms of use </Link></li>
+                        <li><Link>Privacy Policy </Link></li>
+                        <li><Link>Contact us </Link></li>
+                    </div>
+                    
+                <div className='w-1/2 h-full'>
+                    <h1 className='text-green-400 font-semibold'>FOR BUSINESS</h1>
+                    <li><Link to="">Overview</Link></li>
+                    <li><Link to="">Brand Management</Link></li>
+                    <li><Link to="">Advertising</Link></li>
+                    <li><Link to="">Ambassador Program</Link></li>
+                </div>
+            </div>
+
+            <div clasName="bg-zinc-100 h-16 w-full">
+                <p>© 2025 Book_review.com Pty. Ltd. All Rights Reserved.
+                     General disclaimer: All third party trademarks, images and 
+                     copyrights on this page are used for the purpose of comparative 
+                     advertising, criticism or review. This is a public forum 
+                     presenting user opinions on selected products and businesses, 
+                     and as such the views expressed do not reflect the opinion
+                      of Book_review.com </p>
+            </div>
+        </footer>
     </>
   )
 }
