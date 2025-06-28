@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Home() {
   return (
     <>
-        <nav className='h-16 w-full bg-green-400 flex items-center justify-between px-4'>
+        <nav className='h-16 w-full bg-[#80ba27] flex items-center justify-between px-4'>
             <div className="w-1/2 flex items-center justify-between">
                 <NavLink to='/' className='text-black text-xl m-2 m-l-8'>Book_review.com</NavLink>
                 <input type="text" className='text-black h-10 w-96 p-4 rounded-md' placeholder='Search...' />
@@ -15,14 +15,14 @@ function Home() {
             </div>
         </nav>
 
-        <div className='h-72 w-full bg-[url(./images/book.jpeg)] flex flex-col items-center justify-center'>
-            <div className='w-full h-72 bg-blue-900 opacity-75 flex flex-col items-center justify-center'>
+        <div className='h-80 w-full bg-[url(./images/book.jpeg)] flex flex-col items-center justify-center'>
+            <div className='w-full h-80 bg-green-900 opacity-75 flex flex-col items-center justify-center'>
                 <h1 className="text-4xl text-white font-semibold m-4">Know Better, Choose Better</h1>
                 <h1 className='text-white'>Reviews By people like you</h1>
                 <input type="text" className='text-black h-12  w-3/5 p-4 m-4 rounded-xs' placeholder='What are you looking for.. ?' />
             </div>
         </div>
-        <div className=' border-b-2 w-full h-64 flex flex-col items-center justify-center '>
+        <div className=' border-b-2 w-full h-64 m-2 flex flex-col text-center items-center justify-center '>
             <h1 className='m-2 text-2xl font-semibold'>Add a book to the list.</h1>
             <h1>Book_Review.com is a community of consumers helping each other make better book selecting decisions.</h1>
             <button className='text-white font-semibold h-10 m-4 w-96 rounded-md bg-green-900'>Add Book</button>
@@ -33,12 +33,12 @@ function Home() {
             <h1>Browse our most popular Categories</h1>
             <div className='w-full m-2 flex justify-between m-0 p-0'>
                 <div className='w-1/4 h-40 bg-[url(./images/fiction.jpeg)] m-2 flex justify-center items-center'>
-                    <div className='bg-green-500 opacity-50 w-full h-full flex items-center justify-center'>
+                    <div className='bg-green-500 opacity-75 w-full h-full flex items-center justify-center'>
                         <h1>Fiction</h1>
                     </div>
                 </div>
                 <div className='w-1/4 h-40 bg-[url(./images/non-fiction.jpeg)] m-2 flex justify-center items-center'>
-                    <div className='bg-green-500 opacity-50 w-full h-full flex items-center justify-center'>
+                    <div className='bg-green-900 opacity-75 w-full h-full flex items-center justify-center'>
                         <h1>Non-Fiction</h1>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ function Home() {
 
         <footer className='h-16 w-full'>
             <div className='h-64 w-full bg-zinc-200 flex justify-between p-4'> 
-                <div className='w-1/2 h-full'>
+                <div className='w-1/2 h-full ml-8'>
                     <h1 className='text-green-400 font-semibold'>GET MORE INFO</h1> 
                         <li><Link>Help Centre </Link></li>
                         <li><Link> About us</Link></li>
@@ -74,7 +74,7 @@ function Home() {
                         <li><Link>Contact us </Link></li>
                     </div>
                     
-                <div className='w-1/2 h-full'>
+                <div className='w-1/2 h-full ml-8'>
                     <h1 className='text-green-400 font-semibold'>FOR BUSINESS</h1>
                     <li><Link to="">Overview</Link></li>
                     <li><Link to="">Brand Management</Link></li>
