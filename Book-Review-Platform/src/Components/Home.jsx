@@ -1,13 +1,17 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import Modal from './Modal'
+
 function Home() {
+    const [showModal, setShowModal] = React.useState(false);
   return (
+
     <>
         <nav className='h-16 w-full bg-[#80ba27] flex items-center justify-between px-4'>
             <div className="w-1/2 flex items-center justify-between">
                 <NavLink to='/' className='text-black text-xl m-2 m-l-8'>Book_review.com</NavLink>
-                <input type="text" className='text-black h-10 w-96 p-4 rounded-md' placeholder='Search...' />
+                <input type="text" onClick={()=>setShowModal(true)} className='text-black h-10 w-96 p-4 rounded-md' placeholder='Search...' />
             </div>
             <div className="w-1/2 flex items-center justify-end">
                 <button className="text-white b h-10 w-16 rounded-md font-semibold ">Sign in</button>
@@ -19,7 +23,7 @@ function Home() {
             <div className='w-full h-80 bg-green-900 opacity-75 flex flex-col items-center justify-center'>
                 <h1 className="text-4xl text-white font-semibold m-4">Know Better, Choose Better</h1>
                 <h1 className='text-white'>Reviews By people like you</h1>
-                <input type="text" className='text-black h-12  w-3/5 p-4 m-4 rounded-xs' placeholder='What are you looking for.. ?' />
+                <input type="text" onClick={()=>setShowModal(true)} className='text-black h-12  w-3/5 p-4 m-4 rounded-xs' placeholder='What are you looking for.. ?' />
             </div>
         </div>
         <div className=' border-b-2 w-full h-64 m-2 flex flex-col text-center items-center justify-center '>
@@ -93,6 +97,8 @@ function Home() {
                       of Book_review.com </p>
             </div>
         </footer>
+
+        {showModal && <Modal onClose={()=>setShowModal(false)} />}
     </>
   )
 }
