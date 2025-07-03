@@ -87,7 +87,7 @@ function Home() {
                 </div>
             </div>
 
-            <div clasName="bg-zinc-100 h-32 w-full text-center">
+            <div className="bg-zinc-100 h-32 w-full text-center">
                 <p>© 2025 Book_review.com Pty. Ltd. All Rights Reserved.
                      General disclaimer: All third party trademarks, images and 
                      copyrights on this page are used for the purpose of comparative 
