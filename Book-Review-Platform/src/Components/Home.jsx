@@ -20,10 +20,10 @@ function Home() {
         </nav>
 
         <div className='h-80 w-full bg-[url(./images/book.jpeg)] flex flex-col items-center justify-center'>
-            <div className='w-full h-80 bg-green-900 opacity-75 flex flex-col items-center justify-center'>
+            <div className='w-full h-80 bg-green-900 opacity-90 flex flex-col items-center justify-center'>
                 <h1 className="text-4xl text-white font-semibold m-4">Know Better, Choose Better</h1>
                 <h1 className='text-white'>Reviews By people like you</h1>
-                <input type="text" onClick={()=>setShowModal(true)} className='text-black h-12  w-3/5 p-4 m-4 rounded-xs' placeholder='What are you looking for.. ?' />
+                <input type="text" onClick={()=>setShowModal(true)} className='text-black h-12  w-3/5 p-4 m-4 bg-white-900 rounded-md' placeholder='What are you looking for.. ?' />
             </div>
         </div>
         <div className=' border-b-2 w-full h-64 m-2 flex flex-col text-center items-center justify-center '>
@@ -37,22 +37,22 @@ function Home() {
             <h1>Browse our most popular Categories</h1>
             <div className='w-full m-2 flex justify-between m-0 p-0'>
                 <div className='w-1/4 h-40 bg-[url(./images/fiction.jpeg)] m-2 flex justify-center items-center'>
-                    <div className='bg-green-500 opacity-75 w-full h-full flex items-center justify-center'>
+                    <div className='bg-green-900 opacity-90 w-full h-full flex items-center justify-center'>
                         <h1>Fiction</h1>
                     </div>
                 </div>
                 <div className='w-1/4 h-40 bg-[url(./images/non-fiction.jpeg)] m-2 flex justify-center items-center'>
-                    <div className='bg-green-900 opacity-75 w-full h-full flex items-center justify-center'>
-                        <h1>Non-Fiction</h1>
+                    <div className='bg-green-900 opacity-90 w-full h-full flex items-center justify-center'>
+                        <h1 >Non-Fiction</h1>
                     </div>
                 </div>
                 <div className='w-1/4 h-40 bg-[url(./images/Poetry1.jpeg)] m-2 flex justify-center items-center'>
-                    <div className='bg-green-500 opacity-50 w-full h-full flex items-center justify-center'>
+                    <div className='bg-green-900 opacity-90 w-full h-full flex items-center justify-center'>
                         <h1>Poetry</h1>
                     </div>
                 </div>
                 <div className='w-1/4 h-40 bg-[url(./images/drama.jpeg)] m-2 flex justify-center items-center'>
-                    <div className='bg-green-500 opacity-50 w-full h-full flex items-center justify-center'>
+                    <div className='bg-green-900 opacity-90 w-full h-full flex items-center justify-center'>
                         <h1>Drama</h1>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ function Home() {
                 </div>
             </div>
 
-            <div className="bg-zinc-100 h-32 w-full text-center">
+            <div className="bg-zinc-100 w-full text-center">
                 <p>© 2025 Book_review.com Pty. Ltd. All Rights Reserved.
                      General disclaimer: All third party trademarks, images and 
                      copyrights on this page are used for the purpose of comparative 
