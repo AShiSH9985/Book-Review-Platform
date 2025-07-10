@@ -27,7 +27,7 @@ function Home() {
                 <input type="text" onClick={()=>setShowModal(true)} className='text-black h-12  w-3/5 p-4 m-4 bg-white-900 rounded-md' placeholder='What are you looking for.. ?' />
             </div>
         </div>
-        <div className=' border-b-2 w-full h-64 m-2 flex flex-col text-center items-center justify-center '>
+        <div className=' border-b-2 h-64 m-2 flex flex-col text-center items-center justify-center '>
             <h1 className='m-2 text-2xl font-semibold'>Add a book to the list.</h1>
             <h1>Book_Review.com is a community of consumers helping each other make better book selecting decisions.</h1>
             <button className='text-white font-semibold h-10 m-4 w-96 rounded-md bg-green-900'>Add Book</button>
