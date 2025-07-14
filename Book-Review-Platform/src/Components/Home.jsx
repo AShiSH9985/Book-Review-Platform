@@ -6,6 +6,7 @@ import Fiction from './Fiction';
 import Non_Fiction from './Non_Fiction';
 import Footer from './Footer';
 import Poetry from './Poetry';
+import Drama from './Drama';
 function Home() {
     const [showModal, setShowModal] = React.useState(false);
   return (
@@ -87,9 +88,9 @@ function Home() {
 
         {showModal && <Modal onClose={()=>setShowModal(false)} />}
             {/* /* <Fiction /> */}
-            <Non_Fiction/>
+            {/* <Non_Fiction/> */}
             {/* <Poetry /> */}
-            {/* <Drama /> */}
+            <Drama />
     </>
   )
 }
