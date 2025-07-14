@@ -5,7 +5,7 @@ import Modal from './Modal'
 import Fiction from './Fiction';
 import Non_Fiction from './Non_Fiction';
 import Footer from './Footer';
-
+import Poetry from './Poetry';
 function Home() {
     const [showModal, setShowModal] = React.useState(false);
   return (
@@ -86,8 +86,10 @@ function Home() {
         <Footer/>
 
         {showModal && <Modal onClose={()=>setShowModal(false)} />}
-            {/* <Fiction /> */}
-            {/* <Non_Fiction/> */}
+            {/* /* <Fiction /> */}
+            <Non_Fiction/>
+            {/* <Poetry /> */}
+            {/* <Drama /> */}
     </>
   )
 }
