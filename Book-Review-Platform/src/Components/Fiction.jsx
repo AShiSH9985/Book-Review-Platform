@@ -1,4 +1,6 @@
 import React from 'react'
+import Navbar from './Navbar';
+import Footer from './Footer';
 import GodImg from '../images/Fiction/the_god_of_small_things.jpg';
 import WhiteTigerImg from '../images/Fiction/white_tiger.jpeg';
 import BhagavadGitaImg from '../images/Fiction/Shri_Bhagvat_Geeta.jpeg';  
@@ -13,6 +15,7 @@ import { Link } from 'react-router-dom';
 const Fiction = () => {
   return (
     <>
+    <Navbar/>
         <div className='w-full h-full bg-gray-900 grid grid-cols-3  gap-6 p-4 flex flex-col items-center pl-4 pr-4'>
             <div className="h-96 w-auto p-2 bg-white border-2 rounded-md flex flex-col items-center ">
               <img src={GodImg} alt="God" className='h-64 w-auto object-cover rounded-md' />
@@ -98,6 +101,7 @@ const Fiction = () => {
 
 
         </div>
+        <Footer/>
     </>
   )
 }

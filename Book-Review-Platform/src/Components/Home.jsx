@@ -1,25 +1,18 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import Navbar from './Navbar';
 import { Link } from 'react-router-dom'
 import Modal from './Modal'
 import Fiction from './Fiction';
+import Non_Fiction from './Non_Fiction';
+import Footer from './Footer';
 
 function Home() {
     const [showModal, setShowModal] = React.useState(false);
   return (
 
     <>
-        <nav className='h-16 w-full bg-[#80ba27] flex items-center justify-between px-4'>
-            <div className="w-2/3 flex items-center justify-between">
-                <NavLink to='/' className='text-black text-xl m-2 m-l-8'>Book_review.com</NavLink>
-                <input type="text" onClick={()=>setShowModal(true)} className='text-black h-10 w-80 p-4 rounded-md' placeholder='Search...' />
-            </div>
-            <div className="w-1/2 flex items-center justify-end">
-                <button className="text-white b h-10 w-16 rounded-md font-semibold ">Sign in</button>
-                <button className='text-white bg-green-900 m-2 h-10 w-32 rounded-md font-semibold'>Write a review</button>
-            </div>
-        </nav>
-
+       
+        <Navbar/>
         <div className='h-80 w-full bg-[url(./images/book.jpeg)] flex flex-col items-center justify-center'>
             <div className='w-full h-80 bg-green-900 opacity-90 flex flex-col items-center justify-center'>
                 <h1 className="text-4xl text-white font-semibold m-4">Know Better, Choose Better</h1>
@@ -65,7 +58,7 @@ function Home() {
             <h1>Browse some of oue latest reviews</h1>
         </div>
 
-        <footer className='h-16 w-full'>
+        <div className='w-full'>
             <div className='h-64 w-full bg-zinc-200 flex justify-between p-4'> 
                 <div className='w-1/2 h-full ml-8'>
                     <h1 className='text-green-400 font-semibold'>GET MORE INFO</h1> 
@@ -79,7 +72,7 @@ function Home() {
                         <li><Link>Contact us </Link></li>
                     </div>
                     
-                <div className='w-1/2 h-full ml-8'>
+                <div className='w-1/2 h-full ml-8 mb-2'>
                     <h1 className='text-green-400 font-semibold'>FOR BUSINESS</h1>
                     <li><Link to="">Overview</Link></li>
                     <li><Link to="">Brand Management</Link></li>
@@ -88,19 +81,13 @@ function Home() {
                 </div>
             </div>
 
-            <div className="bg-zinc-100 w-full text-center">
-                <p>© 2025 Book_review.com Pty. Ltd. All Rights Reserved.
-                     General disclaimer: All third party trademarks, images and 
-                     copyrights on this page are used for the purpose of comparative 
-                     advertising, criticism or review. This is a public forum 
-                     presenting user opinions on selected products and businesses, 
-                     and as such the views expressed do not reflect the opinion
-                      of Book_review.com </p>
-            </div>
-        </footer>
+            
+        </div>
+        <Footer/>
 
         {showModal && <Modal onClose={()=>setShowModal(false)} />}
-            <Fiction />
+            {/* <Fiction /> */}
+            {/* <Non_Fiction/> */}
     </>
   )
 }
