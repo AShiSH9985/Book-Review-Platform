@@ -7,8 +7,22 @@ import Non_Fiction from './Non_Fiction';
 import Footer from './Footer';
 import Poetry from './Poetry';
 import Drama from './Drama';
+import { useNavigate } from 'react-router-dom';
 function Home() {
     const [showModal, setShowModal] = React.useState(false);
+    const navigate = useNavigate();
+    const goToFiction = () => {
+        navigate('/fiction');
+    };
+    const goToNonFiction=()=>{
+        navigate('/non-fiction');
+    };
+    const goToPoetry=()=>{
+        navigate('/Poetry');
+    };
+    const goToDrama=()=>{
+        navigate('/drama');
+    };
   return (
 
     <>
@@ -31,26 +45,37 @@ function Home() {
             <h1 className=' text-2xl font-semibold m-2'>Popular Categories</h1>
             <h1>Browse our most popular Categories</h1>
             <div className='w-full m-2 flex justify-between m-0 p-0'>
-                <div  className='w-1/4 h-40 bg-[url(./images/fiction.jpeg)] m-2 flex justify-center items-center'>
-                    <div className='bg-green-900 opacity-90 w-full h-full flex items-center justify-center'>
-                        <h1>Fiction</h1>
-                    </div>     
-                </div>
-                <div className='w-1/4 h-40 bg-[url(./images/non-fiction.jpeg)] m-2 flex justify-center items-center'>
-                    <div className='bg-green-900 opacity-90 w-full h-full flex items-center justify-center'>
-                        <h1 >Non-Fiction</h1>
+               
+                <button onClick={goToFiction} className='w-1/4 h-40 bg-[url(./images/fiction.jpeg)] bg-cover bg-no-repeat m-2 flex justify-center items-center'>
+                    <div  className='w-full h-40 flex justify-center items-center'>
+                        <div className='bg-green-900 opacity-90 w-full h-full flex items-center justify-center'>
+                            <h1>Fiction</h1>
+                        </div>     
                     </div>
-                </div>
-                <div className='w-1/4 h-40 bg-[url(./images/Poetry1.jpeg)] m-2 flex justify-center items-center'>
-                    <div className='bg-green-900 opacity-90 w-full h-full flex items-center justify-center'>
-                        <h1>Poetry</h1>
+
+                </button>
+                <button onClick={goToNonFiction} className='w-1/4 h-40 bg-[url(./images/non-fiction.jpeg)] bg-cover bg-no-repeat m-2 flex justify-center items-center'>
+                    <div className='w-full h-40 flex justify-center items-center'>
+                        <div className='bg-green-900 opacity-90 w-full h-full flex items-center justify-center'>
+                            <h1 >Non-Fiction</h1>
+                        </div>
                     </div>
-                </div>
-                <div className='w-1/4 h-40 bg-[url(./images/drama.jpeg)] m-2 flex justify-center items-center'>
+                </button>
+                 <button onClick={goToPoetry} className='w-1/4 h-40 bg-[url(./images/non-fiction.jpeg)] bg-cover bg-no-repeat m-2 flex justify-center items-center'>
+                    <div className='w-full h-40 flex justify-center items-center'>
+                        <div className='bg-green-900 opacity-90 w-full h-full flex items-center justify-center'>
+                            <h1>Poetry</h1>
+                        </div>
+                    </div>
+                </button>
+
+                <button onClick={goToDrama} className='w-1/4 h-40 bg-[url(./images/drama.jpeg)] bg-cover bg-no-repeatbg-cover bg-no-repeat m-2 flex justify-center items-center'>
+                <div className='w-full h-40  flex justify-center items-center'>
                     <div className='bg-green-900 opacity-90 w-full h-full flex items-center justify-center'>
                         <h1>Drama</h1>
                     </div>
                 </div>
+                </button>
             </div>
         </div>
 
@@ -90,7 +115,7 @@ function Home() {
             {/* /* <Fiction /> */}
             {/* <Non_Fiction/> */}
             {/* <Poetry /> */}
-            <Drama />
+            {/* <Drama /> */}
     </>
   )
 }
