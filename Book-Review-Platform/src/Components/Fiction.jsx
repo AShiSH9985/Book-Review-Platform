@@ -16,7 +16,7 @@ const Fiction = () => {
   return (
     <>
     <Navbar/>
-        <div className='w-full h-full bg-gray-900 grid grid-cols-3  gap-6 p-4 flex flex-col items-center pl-4 pr-4'>
+        <div className='w-full h-full bg-gray-900 grid grid-cols-3 gap-6 p-4  pl-4 pr-4'>
             <div className="h-96 w-auto p-2 bg-white border-2 rounded-md flex flex-col items-center ">
               <img src={GodImg} alt="God" className='h-64 w-auto object-cover rounded-md' />
                 <h1 className='text-blue-600 font-semibold m-2'>The God of Small Things</h1>

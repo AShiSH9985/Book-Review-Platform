@@ -8,6 +8,9 @@ import Footer from './Footer';
 import Poetry from './Poetry';
 import Drama from './Drama';
 import { useNavigate } from 'react-router-dom';
+import Write_a_Review from './Write_a_Review';
+import Add_book from './Add_book';
+import Sign_in from './Sign_in';
 function Home() {
     const [showModal, setShowModal] = React.useState(false);
     const navigate = useNavigate();
@@ -84,38 +87,12 @@ function Home() {
             <h1>Browse some of oue latest reviews</h1>
         </div>
 
-        <div className='w-full'>
-            <div className='h-64 w-full bg-zinc-200 flex justify-between p-4'> 
-                <div className='w-1/2 h-full ml-8'>
-                    <h1 className='text-green-400 font-semibold'>GET MORE INFO</h1> 
-                        <li><Link>Help Centre </Link></li>
-                        <li><Link> About us</Link></li>
-                        <li><Link>Write a Review </Link></li>
-                        <li><Link>Posting Guidelines </Link></li>
-                        <li><Link>Trust Centre </Link></li>
-                        <li><Link>Terms of use </Link></li>
-                        <li><Link>Privacy Policy </Link></li>
-                        <li><Link>Contact us </Link></li>
-                    </div>
-                    
-                <div className='w-1/2 h-full ml-8 mb-2'>
-                    <h1 className='text-green-400 font-semibold'>FOR BUSINESS</h1>
-                    <li><Link to="">Overview</Link></li>
-                    <li><Link to="">Brand Management</Link></li>
-                    <li><Link to="">Advertising</Link></li>
-                    <li><Link to="">Ambassador Program</Link></li>
-                </div>
-            </div>
-
-            
-        </div>
         <Footer/>
+        <Sign_in />
 
         {showModal && <Modal onClose={()=>setShowModal(false)} />}
-            {/* /* <Fiction /> */}
-            {/* <Non_Fiction/> */}
-            {/* <Poetry /> */}
-            {/* <Drama /> */}
+           
+            {/* <Add_book /> */}
     </>
   )
 }
