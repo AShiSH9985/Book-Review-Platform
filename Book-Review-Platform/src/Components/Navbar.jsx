@@ -1,9 +1,10 @@
 import React from 'react'
 import Modal from './Modal';
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 function Navbar() {
     const [showModal, setShowModal] = React.useState(false);
+    const navigate=useNavigate();
   return (
     <>
      <nav className='h-16 w-full bg-[#80ba27] flex items-center justify-between px-4'>
@@ -12,7 +13,7 @@ function Navbar() {
                 <input type="text" onClick={()=>setShowModal(true)} className='text-black h-10 w-80 p-4 rounded-md' placeholder='Search...' />
             </div>
             <div className="w-1/4 flex items-center justify-end">
-                <button className="text-white bg-green-900 h-10 w-16 rounded-md font-semibold ">Sign in</button>
+                <button onClick={()=> navigate('/Sign_in')} className="text-white bg-green-900 h-10 w-16 rounded-md font-semibold ">Sign in</button>
                 {/* <button className='text-white bg-green-900 m-2 h-10 w-32 rounded-md font-semibold'>Write a review</button> */}
             </div>
         </nav>
