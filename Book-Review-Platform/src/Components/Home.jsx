@@ -11,6 +11,10 @@ import { useNavigate } from 'react-router-dom';
 import Write_a_Review from './Write_a_Review';
 import Add_book from './Add_book';
 import Sign_in from './Sign_in';
+import Card from './Card';
+
+
+import SapiensImg from '../images/Non-Fiction/sapiens.jpeg';
 function Home() {
     const [showModal, setShowModal] = React.useState(false);
     const navigate = useNavigate();
@@ -88,7 +92,8 @@ function Home() {
         </div>
 
         <Footer/>
-        <Sign_in />
+        {/* <Sign_in />
+        <Card  name='sapiens' image={SapiensImg}/> */}
 
         {showModal && <Modal onClose={()=>setShowModal(false)} />}
            
